@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import { Montserrat } from "next/font/google";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${montserrat.className} antialiased bg-muted`}>
-        <Header />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
 
-        {children}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
