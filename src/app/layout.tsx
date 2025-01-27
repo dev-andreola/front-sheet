@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} antialiased bg-muted`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
+          <div className="h-[77px]"></div>
 
           {children}
         </ThemeProvider>
