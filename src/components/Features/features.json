@@ -1,0 +1,53 @@
+[
+  {
+    "title": "CSS Tools",
+    "description": "Enhance your styling workflow",
+    "href": "/",
+    "tools": [
+      {
+        "title": "Flexbox Generator",
+        "description": "Generate CSS for flexible layouts",
+        "href": "/"
+      },
+      {
+        "title": "Color Palette Creator",
+        "description": "Create a color palette for your project",
+        "href": "/"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript Utilities",
+    "description": "Boost your JavaScript productivity",
+    "href": "/",
+    "tools": [
+      {
+        "title": "RegEx Tester",
+        "description": "Test your regular expressions",
+        "href": "/"
+      },
+      {
+        "title": "Code Formatter",
+        "description": "Format your code with ease",
+        "href": "/"
+      }
+    ]
+  },
+  {
+    "title": "Performance Optimization",
+    "description": "Improve your website's speed",
+    "href": "/",
+    "tools": [
+      {
+        "title": "Image Optimizer",
+        "description": "Optimize images for web",
+        "href": "/"
+      },
+      {
+        "title": "Lazy Loading Helper",
+        "description": "Help you load images lazily",
+        "href": "/"
+      }
+    ]
+  }
+]
