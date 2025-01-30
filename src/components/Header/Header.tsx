@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="w-full h-[77px] py-5 px-6 border-b fixed top-0 inset-x-0 shadow-xl bg-background z-50">
       <div className="flex items-center justify-between max-w-6xl mx-auto ">
-        <h1 className="text-2xl font-semibold">
+        <h1 className="text-2xl font-semibold tracking-tighter">
           Front<span className="font-light">Sheet</span>
         </h1>
         <div className="flex items-center gap-3">
