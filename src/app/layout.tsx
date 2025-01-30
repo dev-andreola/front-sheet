@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/Footer/Footer";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
@@ -25,13 +26,15 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${montserrat.className} antialiased bg-muted`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col justify-between w-full min-h-dvh">
-            <Header />
+          <TooltipProvider>
+            <div className="flex flex-col justify-between w-full min-h-dvh">
+              <Header />
 
-            {children}
+              {children}
 
-            <Footer />
-          </div>
+              <Footer />
+            </div>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
