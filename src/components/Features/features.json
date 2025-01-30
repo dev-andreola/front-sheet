@@ -1,17 +1,42 @@
 [
   {
-    "title": "CSS Tools",
-    "description": "Enhance your styling workflow",
-    "href": "/",
+    "title": "Máscaras",
+    "description": "Formatam automaticamente os dados digitados, garantindo padronização e evitando erros.",
+    "href": "/mascaras",
     "tools": [
       {
-        "title": "Flexbox Generator",
-        "description": "Generate CSS for flexible layouts",
+        "title": "Boleto",
+        "description": "Máscara para boletos",
+        "href": "/mascaras/boleto"
+      },
+      {
+        "title": "CEP",
+        "description": "Máscara para CEP",
         "href": "/"
       },
       {
-        "title": "Color Palette Creator",
-        "description": "Create a color palette for your project",
+        "title": "CPF",
+        "description": "Máscara para CPF",
+        "href": "/"
+      },
+      {
+        "title": "CNPJ",
+        "description": "Máscara para CNPJ",
+        "href": "/"
+      },
+      {
+        "title": "Cartão de Crédito",
+        "description": "Máscara para Cartão de Crédito",
+        "href": "/"
+      },
+      {
+        "title": "Telefone",
+        "description": "Máscara para Telefone",
+        "href": "/"
+      },
+      {
+        "title": "Moeda e Preço",
+        "description": "Máscara para Moedas e Preços",
         "href": "/"
       }
     ]

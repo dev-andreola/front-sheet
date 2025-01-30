@@ -25,12 +25,13 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${montserrat.className} antialiased bg-muted`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <div className="h-[77px]"></div>
+          <div className="flex flex-col justify-between w-full min-h-dvh">
+            <Header />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
