@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Footer from "@/components/Footer/Footer";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
@@ -28,6 +29,8 @@ export default function RootLayout({
           <div className="h-[77px]"></div>
 
           {children}
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
