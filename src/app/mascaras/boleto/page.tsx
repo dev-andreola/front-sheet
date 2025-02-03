@@ -14,6 +14,9 @@ import {
 } from "@tabler/icons-react";
 import React, { useState } from "react";
 import { jsCode, mainFunction, reactCode } from "./codes";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 
 export function maskPaymentSlip(payment_slip: string) {
   return payment_slip
@@ -42,7 +45,7 @@ export default function PaymentSlipMaskPage() {
       <div className="max-w-2xl mx-auto p-6 bg-background my-6 lg:my-12 rounded-lg">
         <h1 className="text-2xl font-bold mb-4">Máscara de Boleto</h1>
         <div className="border p-4 rounded-md mb-6">
-          <label className="block text-sm font-medium mb-2">Boleto</label>
+          <Label className="block text-sm font-medium mb-2">Boleto</Label>
           <Input
             type="tel"
             placeholder="XXXXX.XXXXX XXXXX.XXXXXX XXXXX.XXXXXX X XXXXXXX"
@@ -50,58 +53,87 @@ export default function PaymentSlipMaskPage() {
             value={paymentSlip}
             onChange={(e) => setPaymentSlip(maskPaymentSlip(e.target.value))}
           />
+          <Progress
+            className="mt-2"
+            value={Math.min(paymentSlip.length * (100 / 54), 100)}
+          ></Progress>
         </div>
 
         <h2 className="text-lg font-semibold mb-2">Função de Máscara:</h2>
-        <pre className="bg-zinc-900 text-white p-4 rounded-md text-sm overflow-x-auto">
-          <code>{mainFunction}</code>
-        </pre>
-
-        <h2 className="text-lg font-semibold mt-4 mb-2">Exemplo:</h2>
         <div className="relative bg-zinc-900 text-white p-4 rounded-md text-sm overflow-x-auto">
-          <div className="absolute top-2 left-2 flex gap-2">
-            <Button
-              className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
-              onClick={() => setCode(reactCode)}
-            >
-              <Tooltip>
-                <TooltipTrigger>
-                  <IconBrandReact size={20} className="text-white" />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Código em React</p>
-                </TooltipContent>
-              </Tooltip>
-            </Button>
-            <Button
-              className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
-              onClick={() => setCode(jsCode)}
-            >
-              <Tooltip>
-                <TooltipTrigger>
-                  <IconBrandJavascript size={20} className="text-white" />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Código em Javascript</p>
-                </TooltipContent>
-              </Tooltip>
-            </Button>
-          </div>
-          <Button
-            className="absolute top-2 right-2 p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
-            onClick={copyToClipboard}
-          >
-            <Tooltip>
-              <TooltipTrigger>
-                <IconCopy size={20} className="text-white" />
+          <div className="absolute top-2 right-2">
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <Button
+                  className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
+                  onClick={copyToClipboard}
+                >
+                  <IconCopy size={20} className="text-white" />
+                </Button>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Copiar código</p>
               </TooltipContent>
             </Tooltip>
-          </Button>
+          </div>
+          <pre>
+            <ScrollArea className="w-full">
+              <code>{mainFunction}</code>
+              <ScrollBar orientation="horizontal" className="pb-4" />
+            </ScrollArea>
+          </pre>
+        </div>
+
+        <h2 className="text-lg font-semibold mt-4 mb-2">Exemplo:</h2>
+        <div className="relative bg-zinc-900 text-white p-4 rounded-md text-sm overflow-x-auto">
+          <div className="absolute top-2 left-2 flex gap-2">
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <Button
+                  className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
+                  onClick={() => setCode(reactCode)}
+                >
+                  <IconBrandReact size={20} className="text-white" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Código em React</p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <Button
+                  className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
+                  onClick={() => setCode(jsCode)}
+                >
+                  <IconBrandJavascript size={20} className="text-white" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Código em Javascript</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+          <div className="absolute top-2 right-2">
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <Button
+                  className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
+                  onClick={copyToClipboard}
+                >
+                  <IconCopy size={20} className="text-white" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Copiar código</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
           <pre className="pt-12">
-            <code>{code}</code>
+            <ScrollArea className="w-full pb-4">
+              <code>{code}</code>
+              <ScrollBar orientation="horizontal" />
+            </ScrollArea>
           </pre>
         </div>
       </div>
