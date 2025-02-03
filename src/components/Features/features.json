@@ -12,32 +12,32 @@
       {
         "title": "CEP",
         "description": "Máscara para CEP",
-        "href": "/"
+        "href": "/mascaras/cep"
       },
       {
         "title": "CPF",
         "description": "Máscara para CPF",
-        "href": "/"
+        "href": "/mascaras/cpf"
       },
       {
         "title": "CNPJ",
         "description": "Máscara para CNPJ",
-        "href": "/"
+        "href": "/mascaras/cnpj"
       },
       {
         "title": "Cartão de Crédito",
         "description": "Máscara para Cartão de Crédito",
-        "href": "/"
+        "href": "/mascaras/cartao-de-credito"
       },
       {
         "title": "Telefone",
         "description": "Máscara para Telefone",
-        "href": "/"
+        "href": "/mascaras/telefone"
       },
       {
         "title": "Moeda e Preço",
         "description": "Máscara para Moedas e Preços",
-        "href": "/"
+        "href": "/mascaras/moeda-e-preco"
       }
     ]
   },
