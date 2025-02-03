@@ -39,8 +39,8 @@ export default function PaymentSlipMaskPage() {
 
   const { toast } = useToast();
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(code);
+  const copyToClipboard = (codeToCopy: string) => {
+    navigator.clipboard.writeText(codeToCopy);
     toast({
       description: (
         <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export default function PaymentSlipMaskPage() {
             onChange={(e) => setPaymentSlip(maskPaymentSlip(e.target.value))}
           />
           <Progress
-            className="mt-2"
+            className="mt-2 border-red-300"
             value={Math.min(paymentSlip.length * (100 / 54), 100)}
           ></Progress>
         </div>
@@ -78,7 +78,7 @@ export default function PaymentSlipMaskPage() {
               <TooltipTrigger asChild>
                 <Button
                   className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
-                  onClick={copyToClipboard}
+                  onClick={() => copyToClipboard(mainFunction)}
                 >
                   <IconCopy size={20} className="text-white" />
                 </Button>
@@ -131,7 +131,7 @@ export default function PaymentSlipMaskPage() {
               <TooltipTrigger asChild>
                 <Button
                   className="p-2 bg-zinc-800 rounded-md hover:bg-zinc-700"
-                  onClick={copyToClipboard}
+                  onClick={() => copyToClipboard(code)}
                 >
                   <IconCopy size={20} className="text-white" />
                 </Button>
