@@ -10,6 +10,7 @@ import {
 import {
   IconBrandJavascript,
   IconBrandReact,
+  IconCheck,
   IconCopy,
 } from "@tabler/icons-react";
 import React, { useState } from "react";
@@ -17,6 +18,7 @@ import { jsCode, mainFunction, reactCode } from "./codes";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
+import { useToast } from "@/hooks/use-toast";
 
 export function maskPaymentSlip(payment_slip: string) {
   return payment_slip
@@ -35,9 +37,19 @@ export default function PaymentSlipMaskPage() {
   const [paymentSlip, setPaymentSlip] = useState("");
   const [code, setCode] = useState(reactCode);
 
+  const { toast } = useToast();
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code);
-    alert("Código copiado para a área de transferência!");
+    toast({
+      description: (
+        <div className="flex items-center gap-2">
+          <IconCheck />
+          <p>Código copiado!</p>
+        </div>
+      ),
+      duration: 3000,
+    });
   };
 
   return (
@@ -61,7 +73,7 @@ export default function PaymentSlipMaskPage() {
 
         <h2 className="text-lg font-semibold mb-2">Função de Máscara:</h2>
         <div className="relative bg-zinc-900 text-white p-4 rounded-md text-sm overflow-x-auto">
-          <div className="absolute top-2 right-2">
+          <div className="absolute top-2 right-2 z-20">
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <Button
@@ -86,7 +98,7 @@ export default function PaymentSlipMaskPage() {
 
         <h2 className="text-lg font-semibold mt-4 mb-2">Exemplo:</h2>
         <div className="relative bg-zinc-900 text-white p-4 rounded-md text-sm overflow-x-auto">
-          <div className="absolute top-2 left-2 flex gap-2">
+          <div className="absolute top-2 left-2 flex gap-2 z-20">
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <Button
@@ -114,7 +126,7 @@ export default function PaymentSlipMaskPage() {
               </TooltipContent>
             </Tooltip>
           </div>
-          <div className="absolute top-2 right-2">
+          <div className="absolute top-2 right-2 z-20">
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <Button

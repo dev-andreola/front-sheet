@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/Footer/Footer";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/toaster";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({
@@ -33,6 +34,7 @@ export default function RootLayout({
               {children}
 
               <Footer />
+              <Toaster />
             </div>
           </TooltipProvider>
         </ThemeProvider>
