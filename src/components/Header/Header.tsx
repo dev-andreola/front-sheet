@@ -22,7 +22,7 @@ export default function Header() {
           <ButtonThemeSwitch />
 
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger asChild>
               <Button size="icon" variant={"outline"}>
                 <Menu />
               </Button>
