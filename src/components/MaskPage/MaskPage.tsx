@@ -12,12 +12,14 @@ import {
   IconBrandReact,
   IconCheck,
   IconCopy,
+  IconInfoCircle,
 } from "@tabler/icons-react";
 import React, { useState } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
 interface MaskPageProps {
   title: string;
@@ -153,6 +155,24 @@ export default function MaskPage({
               <ScrollBar orientation="horizontal" />
             </ScrollArea>
           </pre>
+        </div>
+        <div>
+          <Alert className="mt-4">
+            <IconInfoCircle className="size-4" />
+            <AlertTitle className="mb-2">Observação</AlertTitle>
+            <AlertDescription className="space-y-2">
+              <p>
+                Ao utilizar máscaras, use <code>input</code> com o{" "}
+                <code>type=&apos;tel&apos;</code>, dessa forma o input abrirá o
+                teclado numérico em dispositivos mobile e permitirá a escrita de
+                caracteres especiais.
+              </p>
+              <p>
+                A função de máscara no exemplo acima já previne que o usuário
+                digite letras quando não for permitido.
+              </p>
+            </AlertDescription>
+          </Alert>
         </div>
       </div>
     </div>
