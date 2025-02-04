@@ -13,9 +13,9 @@ export default function Header() {
       <div className="flex items-center justify-between max-w-6xl mx-auto ">
         <Button variant={"ghost"} className="hover:bg-transparent" asChild>
           <Link href="/">
-            <h1 className="text-2xl font-semibold tracking-tighter">
+            <strong className="text-2xl font-semibold tracking-tighter">
               Front<span className="font-light">Sheet</span>
-            </h1>
+            </strong>
           </Link>
         </Button>
         <div className="flex items-center gap-3">

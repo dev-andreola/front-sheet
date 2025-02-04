@@ -13,7 +13,9 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
   return (
     <Card className="border p-4 rounded-xl w-full bg-background">
       <CardHeader className="px-0 pt-4 pb-0">
-        <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
+        <CardTitle className="text-xl font-semibold">
+          <h2>{feature.title}</h2>
+        </CardTitle>
       </CardHeader>
       <CardDescription className="text-md">
         {feature.description}
@@ -23,7 +25,9 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
         {feature.tools.map((tool) => (
           <Button key={tool.title} variant="card" size="card" asChild>
             <Link href={tool.href}>
-              <span className="text-lg">{tool.title}</span>
+              <span className="text-lg">
+                <h3>{tool.title}</h3>
+              </span>
               <span className="text-sm text-muted-foreground">
                 {tool.description}
               </span>
