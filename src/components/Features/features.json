@@ -28,16 +28,6 @@
         "title": "Cartão de Crédito",
         "description": "Máscara para Cartão de Crédito",
         "href": "/mascaras/cartao-de-credito"
-      },
-      {
-        "title": "Telefone",
-        "description": "Máscara para Telefone",
-        "href": "/mascaras/telefone"
-      },
-      {
-        "title": "Moeda e Preço",
-        "description": "Máscara para Moedas e Preços",
-        "href": "/mascaras/moeda-e-preco"
       }
     ]
   },
