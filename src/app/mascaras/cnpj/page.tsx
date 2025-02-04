@@ -3,7 +3,7 @@
 import { jsCode, mainFunction, reactCode } from "./codes";
 import MaskPage from "@/components/MaskPage/MaskPage";
 
-export function maskCNPJ(cnpj: string) {
+function maskCNPJ(cnpj: string): string {
   return cnpj
     .replace(/\D/g, "")
     .replace(/(\d{2})(\d)/, "$1.$2")

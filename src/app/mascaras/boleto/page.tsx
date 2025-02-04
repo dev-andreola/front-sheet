@@ -3,7 +3,7 @@
 import { jsCode, mainFunction, reactCode } from "./codes";
 import MaskPage from "@/components/MaskPage/MaskPage";
 
-function maskPaymentSlip(payment_slip: string) {
+function maskPaymentSlip(payment_slip: string): string {
   return payment_slip
     .replace(/\D/g, "")
     .replace(/(\d{33})(\d)/, "$1 $2")

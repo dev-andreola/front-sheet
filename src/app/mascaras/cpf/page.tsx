@@ -4,7 +4,7 @@ import React from "react";
 import { jsCode, mainFunction, reactCode } from "./codes";
 import MaskPage from "@/components/MaskPage/MaskPage";
 
-export function maskCPF(cpf: string) {
+function maskCPF(cpf: string): string {
   return cpf
     .replace(/\D/g, "")
     .replace(/(\d{3})(\d)/, "$1.$2")

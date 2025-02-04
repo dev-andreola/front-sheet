@@ -3,7 +3,7 @@
 import { jsCode, mainFunction, reactCode } from "./codes";
 import MaskPage from "@/components/MaskPage/MaskPage";
 
-export function maskCreditCardNumber(credit_card: string) {
+function maskCreditCardNumber(credit_card: string): string {
   return credit_card
     .replace(/\D/g, "")
     .replace(/(\d{12})(\d)/, "$1 $2")

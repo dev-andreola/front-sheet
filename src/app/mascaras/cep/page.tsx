@@ -3,7 +3,7 @@
 import { jsCode, mainFunction, reactCode } from "./codes";
 import MaskPage from "@/components/MaskPage/MaskPage";
 
-export function maskCEP(cep: string) {
+function maskCEP(cep: string): string {
   return cep
     .replace(/\D/g, "")
     .replace(/(\d{5})(\d)/, "$1-$2")
