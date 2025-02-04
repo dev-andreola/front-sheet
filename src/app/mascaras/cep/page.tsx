@@ -16,7 +16,7 @@ export default function CEPMaskPage() {
       title="CEP"
       label="CEP"
       digits={9}
-      placeholder="XXXXX-XXX"
+      placeholder="00000-000"
       maskFunction={maskCEP}
       codes={{ jsCode, mainFunction, reactCode }}
     />

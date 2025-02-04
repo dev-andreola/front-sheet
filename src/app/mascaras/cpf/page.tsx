@@ -18,7 +18,7 @@ export default function CPFMaskPage() {
     <MaskPage
       title="CPF"
       label="CPF"
-      placeholder="XXX.XXX.XXX-XX"
+      placeholder="000.000.000-00"
       digits={14}
       maskFunction={maskCPF}
       codes={{ jsCode, mainFunction, reactCode }}

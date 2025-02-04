@@ -18,7 +18,7 @@ export default function CNPJMaskPage() {
     <MaskPage
       title="CNPJ"
       label="CNPJ"
-      placeholder="XX.XXX.XXX/XXXX-XX"
+      placeholder="00.000.000/0000-00"
       maskFunction={maskCNPJ}
       digits={18}
       codes={{ reactCode, jsCode, mainFunction }}

@@ -18,7 +18,7 @@ export default function CreditCardMaskPage() {
       title="Cartão de Crédito"
       label="Número do Cartão"
       digits={19}
-      placeholder="XXXX XXXX XXXX XXXX"
+      placeholder="0000 0000 0000 0000"
       maskFunction={maskCreditCardNumber}
       codes={{ jsCode, mainFunction, reactCode }}
     />
