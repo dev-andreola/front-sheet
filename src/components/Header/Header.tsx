@@ -1,19 +1,15 @@
-import { Home, Info, Menu } from "lucide-react";
+"use client";
+
+import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
 import ButtonThemeSwitch from "../ButtonThemeSwitch/ButtonThemeSwitch";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
+import { Sheet, SheetTrigger } from "../ui/sheet";
 import Link from "next/link";
+import SideBarMenu from "./SideBarMenu";
 
 export default function Header() {
   return (
-    <div className="w-full h-[77px] py-5 px-6 border-b fixed top-0 inset-x-0 shadow-md duration-200  bg-background/80 backdrop-blur z-50">
+    <div className="w-[100vw] h-[77px] py-5 px-6 border-b fixed top-0 inset-x-0 shadow-md duration-200  bg-background/80 backdrop-blur z-50">
       <div className="flex items-center justify-between max-w-6xl mx-auto ">
         <Button variant={"ghost"} className="hover:bg-transparent" asChild>
           <Link href="/">
@@ -31,26 +27,8 @@ export default function Header() {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-                <SheetDescription>
-                  Selecione o recurso desejado
-                </SheetDescription>
-              </SheetHeader>
 
-              <ul className="mt-16 flex flex-col space-y-4">
-                <li className="flex items-center gap-3 py-3 px-3 border rounded-sm">
-                  <Home />
-                  <h2>Início</h2>
-                </li>
-
-                <li className="flex items-center gap-3 py-3 px-3 border rounded-sm">
-                  <Info />
-                  <h2>Sobre nós</h2>
-                </li>
-              </ul>
-            </SheetContent>
+            <SideBarMenu />
           </Sheet>
         </div>
       </div>

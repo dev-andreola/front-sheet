@@ -33,12 +33,18 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-2">vt-code</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-zinc-400 hover:text-white">
+                <Link
+                  href="https://github.com/dev-andreola"
+                  className="text-zinc-400 hover:text-white"
+                >
                   GitHub
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-zinc-400 hover:text-white">
+                <Link
+                  href="https://www.linkedin.com/in/dev-andreola"
+                  className="text-zinc-400 hover:text-white"
+                >
                   LinkedIn
                 </Link>
               </li>
