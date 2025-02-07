@@ -56,7 +56,7 @@ export default function MaskPage({
           <p>Código copiado!</p>
         </div>
       ),
-      duration: 3000,
+      duration: 1000,
     });
   };
 

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Geradores",
+    "description": "Ferramentas interativas que permitem criar e personalizar elementos visuais ou funcionais sem a necessidade de escrever código manualmente.",
+    "href": "/geradores",
+    "tools": [
+      {
+        "title": "Box Shadow",
+        "description": "Gerador de box shadow",
+        "href": "/geradores/box-shadow"
+      }
+    ]
+  },
+  {
     "title": "Máscaras",
     "description": "Formatam automaticamente os dados digitados, garantindo padronização e evitando erros.",
     "href": "/mascaras",
