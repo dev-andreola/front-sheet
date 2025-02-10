@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Dev Toolkit
 
-## Getting Started
+Um kit de ferramentas essencial para desenvolvedores front-end, oferecendo geradores e utilitários para agilizar o desenvolvimento e melhorar a produtividade.
 
-First, run the development server:
+## ✨ Recursos
+
+- ✨ **Gerador de Box Shadow** - Crie sombras personalizadas com facilidade.
+- ✨ **Gerador de Máscaras de Input** - Configure máscaras para formulários rapidamente.
+
+## 🛠️ Instalação
+
+Para utilizar o Frontend Dev Toolkit localmente, siga os passos abaixo:
 
 ```bash
-npm run dev
-# or
+# Clone o repositório
+git clone https://github.com/dev-andreola/front-sheet.git
+
+# Acesse a pasta do projeto
+cd front-sheet
+
+# Instale as dependências
+yarn
+
+# Inicie o projeto
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Como Usar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Acesse a aplicação no navegador e utilize os geradores e utilitários disponíveis. O layout intuitivo permite criar códigos rapidamente e copiá-los para uso imediato em seus projetos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👥 Contribuição
 
-## Learn More
+Contribuições são bem-vindas! Se você deseja adicionar novos recursos ou corrigir bugs, siga estas etapas:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork o repositório
+2. Crie uma branch para sua feature (`git checkout -b feature-nova`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`)
+4. Push para sua branch (`git push origin feature-nova`)
+5. Abra um Pull Request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dúvidas? Sugestões? Entre em contato ou abra uma issue no repositório! ✨
